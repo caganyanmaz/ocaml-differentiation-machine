@@ -1,0 +1,4 @@
+(library
+ (name ocaml_differentiation_machine)
+ (libraries core)
+ (preprocess (pps ppx_deriving.show)))

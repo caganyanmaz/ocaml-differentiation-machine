@@ -1,0 +1,4 @@
+(executable
+ (public_name ocaml-differentiation-machine)
+ (name main)
+ (libraries ocaml_differentiation_machine))
