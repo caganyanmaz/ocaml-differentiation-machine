@@ -58,7 +58,6 @@ and try_eval = function
                 let* res = try_eval a in
                 return (My_diff_float.diff res)
 
-
 let eval e =
         match try_eval e with
         | None     -> Printf.printf "No free variables allowed!\n"

@@ -119,9 +119,9 @@ let chainl1 (p: 'a t) (op: ('a -> 'a -> 'a) t) =
         return res
 
 let chainr1 p op = 
-        let* op_pairs = many (seq op p) in
+        let* op_pairs = many (seq p op) in
         let* x = p in
-        let res = List.fold_right op_pairs ~f:(fun (f, a) b -> f a b) ~init:x in
+        let res = List.fold_right op_pairs ~f:(fun (a, f) b -> f a b) ~init:x in
         return res
 
 
